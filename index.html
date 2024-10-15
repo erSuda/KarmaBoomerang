@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karma Boomerang - Alek</title>
+    
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('sfondo.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        .title-container {
+            background-color: rgba(255, 255, 255, 0.2); /* Patina bianca semitrasparente */
+            padding: 10px 40px; /* Spazio interno per dare un po' di "respiro" al titolo */
+            border-radius: 15px; /* Angoli arrotondati */
+            margin-bottom: 20px; /* Spazio sotto al titolo per distanziarlo dalle icone */
+            text-align: center; /* Centra il testo */
+        }
+
+        h4 {
+            color: black; /* Colore del testo */
+            font-size: 24px; /* Dimensione del testo */
+            margin: 0; /* Rimuove il margine di default del titolo */
+        }
+
+        .music-platforms {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .music-platforms div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .music-platforms img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+
+        .music-platforms h2 {
+            font-size: 30px;
+            margin: 5px 0;
+        }
+
+        .music-platforms .logo {
+            width: 150px;
+        }
+
+        @media (max-width: 768px) {
+            .music-platforms {
+                width: 90%;
+                padding: 30px;
+            }
+
+            .music-platforms h2 {
+                font-size: 24px;
+            }
+
+            .music-platforms .logo {
+                width: 120px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Contenitore per il titolo con patina bianca -->
+    <div class="title-container">
+        <h4>Karma Boomerang - Alek</h4>
+    </div>
+
+    <div class="music-platforms">
+        <!-- Spotify -->
+        <div>
+            <a href="https://open.spotify.com/track/2RsiWaoL4v2EEADLGkgIk9?si=RfZwK1XwSoWpqG3jco5sRw&utm_source=whatsapp">
+                <img class="logo" src="spotify.png" alt="Spotify Logo">
+            </a>
+            <h2>Spotify</h2>
+        </div>
+
+        <!-- Apple Music -->
+        <div>
+            <a href="https://music.apple.com/it/album/le-mie-storie-single/1731176007">
+                <img class="logo" src="apple_music.png" alt="Apple Music Logo">
+            </a>
+            <h2>Apple Music</h2>
+        </div>
+
+        <!-- YouTube Music -->
+        <div>
+            <a href="https://www.youtube.com/watch?v=bpkW7fVEQrA">
+                <img class="logo" src="youtube.png" alt="YouTube Music Logo">
+            </a>
+            <h2>YouTube</h2>
+        </div>
+
+        <!-- SoundCloud -->
+        <div>
+            <a href="https://soundcloud.com/">
+                <img class="logo" src="soundcloud.png" alt="SoundCloud Logo">
+            </a>
+            <h2>SoundCloud</h2>
+        </div>
+    </div>
+
+</body>
+</html>
