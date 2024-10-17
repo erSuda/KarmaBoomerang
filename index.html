@@ -13,11 +13,18 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background: url('sfondo_occhio_rosa.png') no-repeat center center fixed; 
             background-size: cover;
+        }
+
+        h4 {
+            color: black; /* Colore del testo */
+            font-size: 24px; /* Dimensione del testo */
+            margin: 0; /* Rimuove il margine di default del titolo */
         }
 
         .music-platforms {
@@ -84,7 +91,9 @@
 </head>
 <body>
 
-    <h4>Karma Boomerang - Alek</h4>
+    <div>
+        <h4>Karma Boomerang - Alek</h4>
+    </div>
 
     <div class="music-platforms">
         <!-- Spotify -->
