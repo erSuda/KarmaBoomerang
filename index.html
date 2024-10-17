@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    
+    <link rel="manifest" href="manifest.json">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karma Boomerang - Alek</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('sfondo_occhio_rosa.png') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        .music-platforms {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .music-platforms div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .music-platforms img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 5px;
+            transition: opacity 0.3s ease; /* Transizione fluida della trasparenza */
+        }
+
+        /* Imposta l'opacità per rendere l'immagine trasparente inizialmente */
+        .faded {
+            opacity: 0.5; /* 50% di trasparenza */
+        }
+
+        /* Al clic, l'immagine torna opaca (piena opacità) */
+        .colored {
+            opacity: 1;
+        }
+
+        .music-platforms h2 {
+            font-size: 30px;
+            margin: 5px 0;
+        }
+
+        .music-platforms .logo {
+            width: 150px;
+        }
+
+        @media (max-width: 768px) {
+            .music-platforms {
+                width: 90%;
+                padding: 30px;
+            }
+
+            .music-platforms h2 {
+                font-size: 24px;
+            }
+
+            .music-platforms .logo {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h4>Karma Boomerang - Alek</h4>
+
+    <div class="music-platforms">
+        <!-- Spotify -->
+        <div>
+            <a href="https://open.spotify.com/track/2RsiWaoL4v2EEADLGkgIk9?si=RfZwK1XwSoWpqG3jco5sRw&utm_source=whatsapp">
+                <img class="logo faded" id="spotifyLogo" src="spotify.png" alt="Spotify Logo" 
+                    onclick="makeOpaque('spotifyLogo')"> <!-- Immagine trasparente -->
+            </a>
+            <h2>Spotify</h2>
+        </div>
+
+        <!-- Apple Music -->
+        <div>
+            <a href="https://music.apple.com/it/album/le-mie-storie-single/1731176007">
+                <img class="logo faded" id="appleLogo" src="apple_music.png" alt="Apple Music Logo" 
+                    onclick="makeOpaque('appleLogo')"> <!-- Immagine trasparente -->
+            </a>
+            <h2>Apple Music</h2>
+        </div>
+
+        <!-- YouTube -->
+        <div>
+            <a href="https://www.youtube.com/watch?v=bpkW7fVEQrA">
+                <img class="logo faded" id="youtubeLogo" src="youtube_music.png" alt="YouTube Logo" 
+                    onclick="makeOpaque('youtubeLogo')"> <!-- Immagine trasparente -->
+            </a>
+            <h2>YouTube</h2>
+        </div>
+
+        <!-- SoundCloud -->
+        <div>
+            <a href="https://soundcloud.com/">
+                <img class="logo faded" id="soundcloudLogo" src="soundcloud.png" alt="SoundCloud Logo" 
+                    onclick="makeOpaque('soundcloudLogo')"> <!-- Immagine trasparente -->
+            </a>
+            <h2>SoundCloud</h2>
+        </div>
+    </div>
+
+    <script>
+        // Funzione per rimuovere la trasparenza al clic
+        function makeOpaque(imageId) {
+            var image = document.getElementById(imageId);
+            image.classList.remove('faded'); // Rimuove la trasparenza
+            image.classList.add('colored'); // Aggiunge l'opacità piena
+        }
+    </script>
+</body>
+</html>
